@@ -1,6 +1,6 @@
 #!/bin/bash
 
 if command -v ansible-playbook &> /dev/null; then
-    ansible-playbook {{ joinPath (cat .chezmoi.sourceDir) "dot_bootstrap/setup.yml" | quote }} --ask-become-pass
+    ansible-playbook {{ joinPath (printf "%v" .chezmoi.sourceDir) "dot_bootstrap/setup.yml" | quote }} --ask-become-pass
 fi
 
