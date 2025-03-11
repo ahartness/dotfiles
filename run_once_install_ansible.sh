@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install_on_arch() {
-    yes | sudo pacman -Syu ansible-core 
+    yes | sudo pacman -Syu ansible
 }
 
 install_on_ubuntu() {
