@@ -9,15 +9,13 @@ Ensure you have the following packages
 ### Arch 
 
 ```bash
-pacman -S git
-pacman -S stow
+pacman -S git stow 
 ```
 
 ###MacOSX
 
 ```bash
-brew install git
-brew install stow
+brew install git stow
 ```
 
 ## Installation
