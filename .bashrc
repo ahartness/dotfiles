@@ -9,6 +9,7 @@
  alias ll='ls -l --color=auto'
  alias grep='grep --color=auto'
  alias lla='ls -la --color=auto'
+ alias vim='nvim'
  
  PS1='[\u@\h \W]\$ '
  
