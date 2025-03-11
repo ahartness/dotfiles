@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.g.mapleader = " "
-vim.g.maplocalleader = " " 
+vim.g.maplocalleader = " "
 
 -- Remove search highlights after searching
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {desc = "Remove Search Highlights"})
@@ -26,3 +26,6 @@ vim.keymap.set("v", ">", ">gv", {desc = "Indent Right in visual mode"})
 
 -- Open Mason Config
 vim.keymap.set("n", "<leader>cm", ":Mason<cr>", {desc = "Open Mason"})
+
+-- Quick ESC
+vim.keymap.set("i", "jj", "<Esc>", {desc = "Quick ESC"})
