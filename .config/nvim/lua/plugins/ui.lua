@@ -4,7 +4,7 @@ return {
         lazy = true,
     },
     {
-        "echasnovski/mini.icons",
+        "echasnovski/mini.icons", -- Mini Icons for Nvim Tree 
         lazy = true,
         opts = {
             file = {
@@ -21,5 +21,15 @@ return {
                 return package.loaded["nvim-web-devicons"]
             end
         end
+    },
+    {
+        "folke/noice.nvim", -- CmdLine Center Text Bar
+        event = "VeryLazy",
+        opts = {
+            -- add options here
+        },
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+        }
     }
 }
