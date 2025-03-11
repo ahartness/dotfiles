@@ -12,7 +12,7 @@ Ensure you have the following packages
 pacman -S git stow 
 ```
 
-###MacOSX
+### MacOSX
 
 ```bash
 brew install git stow
