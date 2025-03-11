@@ -13,10 +13,10 @@ return {
         ts_config.setup({
             -- make sure we have all the configs installed
             ensure_installed = {
-                "vim", 
-                "vimdoc", 
+                "vim",
+                "vimdoc",
                 "lua",
-                "java", 
+                "java",
                 "javascript",
                 "typescript",
                 "html",
@@ -38,7 +38,6 @@ return {
             },
             -- Enable Highlighting
             highlight = { enable = true },
-            
             -- Enable TSX auto closing tags
             autotag = { enable = true }
         })
