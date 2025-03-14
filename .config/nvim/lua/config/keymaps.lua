@@ -28,4 +28,6 @@ vim.keymap.set("v", ">", ">gv", {desc = "Indent Right in visual mode"})
 vim.keymap.set("n", "<leader>cm", ":Mason<cr>", {desc = "Open Mason"})
 
 -- Quick ESC
+vim.keymap.set("i", "jk", "<Esc>", {desc = "Quick ESC"})
+vim.keymap.set("i", "kj", "<Esc>", {desc = "Quick ESC"})
 vim.keymap.set("i", "jj", "<Esc>", {desc = "Quick ESC"})

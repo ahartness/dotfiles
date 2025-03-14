@@ -1,8 +1,8 @@
 # Initialize oh-my-posh
- eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
+eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
  
  # If not running interactively, don't do anything
- [[ $- != *i* ]] return
+ # [[ $- != *i* ]] return
  
  # Aliases
  alias ls='ls --color=auto'
