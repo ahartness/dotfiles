@@ -1,5 +1,3 @@
-# Initialize oh-my-posh
-eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
  
  # If not running interactively, don't do anything
  # [[ $- != *i* ]] return
@@ -14,3 +12,11 @@ eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbele
  PS1='[\u@\h \W]\$ '
  
  source /usr/share/nvm/init-nvm.sh
+
+# Initialize oh-my-posh
+# Add local bin to path
+export PATH=$PATH:/home/hartness/.local/bin
+
+# Init oh-my-posh and set theme
+eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
+
