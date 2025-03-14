@@ -32,3 +32,8 @@ Then use GNU Stow to create the symlinks
 ```bash
 stow .
 ```
+
+## Future TODO Items
+
+- [ ] Create a custom config for oh-my-posh -> ~/.config/ohmyposh/..config.json
+- [ ] Add a script to automate the installation process

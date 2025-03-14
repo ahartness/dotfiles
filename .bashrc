@@ -15,7 +15,7 @@
 
 # Initialize oh-my-posh
 # Add local bin to path
-export PATH=$PATH:/home/hartness/.local/bin
+export PATH="$HOME/bin:$PATH"
 
 # Init oh-my-posh and set theme
 eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
