@@ -3,7 +3,7 @@ return {
         'nvim-telescope/telescope.nvim',
         -- pull a specific version of the plugin
         tag = '0.1.6',
-        dependencies = { 
+        dependencies = {
             -- general plugins used to build user interface in neovim plugin
             'nvim-lua/plenary.nvim'
         },
@@ -30,7 +30,6 @@ return {
        config = function()
            --  get access to telescape navigation functions
            local actions = require("telescope.actions")
-            
             require("telescope").setup({
                 -- use ui-select dropdown as out UI
                 extensions = {
