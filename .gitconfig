@@ -3,3 +3,5 @@
 	email = hartness.andrew@gmail.com
 [core]
 	editor = vim
+[pull]
+	rebase = false
