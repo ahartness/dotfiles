@@ -2,12 +2,19 @@
  # If not running interactively, don't do anything
  # [[ $- != *i* ]] return
  
- # Aliases
+ # Directory Aliases
  alias ls='ls --color=auto'
  alias ll='ls -l --color=auto'
  alias grep='grep --color=auto'
  alias lla='ls -la --color=auto'
  alias vim='nvim'
+
+ # Git Aliases
+ alias gs='git status'
+ alias gadd='git add .'
+ alias gcm='git commit -m'
+ alias gp='git pull'
+ alias gpush='git push'
  
  PS1='[\u@\h \W]\$ '
  
