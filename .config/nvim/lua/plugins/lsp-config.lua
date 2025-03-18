@@ -60,6 +60,10 @@ return {
                 capabilities.capabilities,
             })
 
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
+
             -- Show code documentation if available
             vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation" })
             -- go to where the code/variable was defined
