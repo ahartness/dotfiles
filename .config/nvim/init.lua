@@ -17,7 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Declare the options for lazyvim 
-local opt = {
+local opts = {
     change_detection = {
         enabled = false,
         -- Don't notify us every time a change is made to the config

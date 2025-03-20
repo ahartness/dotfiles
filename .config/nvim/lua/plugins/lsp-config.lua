@@ -1,5 +1,6 @@
 return {
-    { "williamboman/mason.nvim",
+    {
+        "williamboman/mason.nvim",
         config = function()
             -- setup mason with default props
             require("mason").setup()
@@ -42,7 +43,7 @@ return {
        config = function()
             -- get access to the lspconfig plugin functions
             local lspconfig = require("lspconfig")
-
+            -- get access to the nvim-cmp capabilities
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             lspconfig.lua_ls.setup({
@@ -56,12 +57,32 @@ return {
                 }
             })
 
+            -- Setup the typescript language server
             lspconfig.ts_ls.setup({
                 capabilities.capabilities,
             })
 
+            -- Setup the go language server
             lspconfig.gopls.setup({
                 capabilities = capabilities,
+            })
+
+            -- Setup the rust analyzer language server
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+                settings = {
+                    ['rust-analyzer'] = {
+                       diagnostics = {
+                           enable = true
+                       }
+                    }
+                }
+            })
+
+            -- Setup the clangd language server
+            lspconfig.clangd.setup({
+                capabilities = capabilities,
+                filetypes = { "c", "cpp", "objc", "objcpp" }
             })
 
             -- Show code documentation if available
