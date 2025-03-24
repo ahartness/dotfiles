@@ -18,7 +18,7 @@
  
  PS1='[\u@\h \W]\$ '
  
- source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # Initialize oh-my-posh
 # Add local bin to path
