@@ -8,6 +8,7 @@
  alias grep='grep --color=auto'
  alias lla='ls -la --color=auto'
  alias vim='nvim'
+ alias nv='nvim'
 
  # Git Aliases
  alias gs='git status'
