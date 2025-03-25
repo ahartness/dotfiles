@@ -67,6 +67,11 @@ return {
                 capabilities = capabilities,
             })
 
+            -- Setup the gdscript language server
+            lspconfig.gdscript.setup({
+                capabilities = capabilities,
+            })
+
             -- Setup the rust analyzer language server
             lspconfig.rust_analyzer.setup({
                 capabilities = capabilities,

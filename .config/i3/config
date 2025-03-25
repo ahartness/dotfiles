@@ -57,6 +57,7 @@ floating_modifier $mod
 for_window [class="steam"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="Spotify"] floating enable
+for_window [class="UHK Agent"] floating enable
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.

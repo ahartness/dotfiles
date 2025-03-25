@@ -14,6 +14,7 @@ return {
             -- Search for files by their names
             vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "[F]ind [F]iles"})
             -- Search for files based on the text inside them
+            -- Need to install ripgrep for this to work
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "[F]ind by [G]rep"})
             -- Search for Code Diagnostics in the current project
             vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = "[F]ind [D]iagnostics"})

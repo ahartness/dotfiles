@@ -26,6 +26,7 @@ return {
                 "markdown",
                 "markdown_inline",
                 "gitignore",
+                "gdscript",
                 "angular",
                 "c",
                 "dockerfile",
@@ -37,7 +38,7 @@ return {
                 "rasi",
                 "hyprlang",
                 "zig"
-            },
+            },   
             -- Enable Highlighting
             highlight = { enable = true },
             -- Enable TSX auto closing tags
