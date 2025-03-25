@@ -9,6 +9,8 @@
  alias lla='ls -la --color=auto'
  alias vim='nvim'
  alias nv='nvim'
+ alias dev='cd ~/Developer'
+ alias dotfiles='cd ~/dotfiles'
 
  # Git Aliases
  alias gs='git status'

@@ -34,6 +34,8 @@ return {
                 "rust",
                 "tmux",
                 "yaml",
+                "rasi",
+                "hyprlang",
                 "zig"
             },
             -- Enable Highlighting
