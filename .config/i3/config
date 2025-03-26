@@ -25,6 +25,8 @@ exec_always feh --bg-scale ~/.config/backgrounds/mountains.png
 # is used in the bar {} block below.
 font pango:JetBrainsMono Nerd Font 14
 
+exec xrandr --output DP-4 --primary --mode 3440x1440 --rate 144
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
