@@ -13,9 +13,9 @@ set $wm_browser                 brave
 set $wm_app_launcher            rofi
 set $wm_compositor              picom
 
-set $wm_monitor_resolution      3440x1440
-set $wm_monitor_refresh_rate    144
-set $wm_monitor_name            DP-4
+set $wm_monitor_resolution      1680x1050
+#set $wm_monitor_refresh_rate    144
+set $wm_monitor_name            Virtual-1
 
 # Execute picom on startup
 exec --no-startup-id $wm_compositor 
@@ -32,7 +32,14 @@ exec_always feh --bg-scale ~/.config/backgrounds/mountains.png
 font pango:$wm_font $wm_font_size 
 
 # This sets the monitor display with the correct resolution and refresh rate
-exec xrandr --output $wm_monitor_name --primary --mode $wm_monitor_resolution --rate $wm_monitor_refresh_rate
+exec_always xrandr --output $wm_monitor_name --primary --mode $wm_monitor_resolution 
+
+# Set the virtual trackpad from mac to use natural scrolling
+# xinput list
+# xinput list-props <id>
+exec_always xinput set-prop 8 255 1
+# Set the scrolling to something lower
+exec_always xinput set-prop 8 284 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).

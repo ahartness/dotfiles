@@ -1,10 +1,10 @@
 configuration{
     modi:                   "drun";
-    font:                   "Terminus 14";
+    font:                   "JetBrainsMono Nerd Font 14";
     icon-theme:             "Papirus";
     show-icons:             true;
     terminal:               "kitty";
-    display-drun:           " ";
+    display-drun:           " ";
     drun-display-format:    "{icon} {name}";
     location:               0;
     disable-history:        false;
