@@ -63,6 +63,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/dotf
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Dunst is a lightweight notification daemon that works well with i3.
+exec --no-startup-id dunst
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -77,7 +80,7 @@ floating_modifier $mod
 for_window [class="pavucontrol"] floating enable
 #for_window [class="Spotify"] floating enable
 for_window [class="UHK Agent"] floating enable
-for_window [class="qBittorrent"] floating enable
+#for_window [class="qBittorrent"] floating enable
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.

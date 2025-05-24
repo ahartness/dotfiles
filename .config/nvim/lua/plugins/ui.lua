@@ -31,5 +31,14 @@ return {
         dependencies = {
             "MunifTanjim/nui.nvim",
         }
+    },
+    {
+        'MeanderingProgrammer/render-markdown.nvim', -- Markdown Preview
+        dependencies = {
+            'echasnovski/mini.nvim', -- Markdown Preview
+        },
+        opts = {
+            -- add options here
+        },
     }
 }
