@@ -1,0 +1,257 @@
+# ~/.config/sway/config
+#
+# This is a basic Sway configuration file.
+# It's intended to be a good starting point for Arch Linux users.
+#
+# Remember to replace 'your_username' placeholders if you use them.
+
+# --- Global Settings ---
+
+# Sets the Mod key. Mod4 is the Super key.
+set $mod Mod4
+
+# Your preferred terminal emulator. Alacritty is a good Wayland-native option.
+set $term kitty 
+
+# Your preferred application launcher. Wofi is Wayland-native.
+set $menu wofi --show drun
+
+# Set wallpaper (adjust path to your image)
+# You can use swaybg for this.
+# For example: swaybg -i ~/Pictures/wallpaper.jpg -m fill
+exec swaybg -i ~/.config/backgrounds/mountains.png -m fill
+
+# Autostart applications on Sway startup
+# exec nm-applet # NetworkManager applet (if you use it)
+# exec udiskie    # Auto-mount USB drives (if you use it)
+# exec waybar     # Start the status bar (see Waybar config section below)
+
+# --- Output Configuration ---
+
+# Configure outputs (monitors).
+# Find your output names with `swaymsg -t get_outputs`.
+# Example for a single monitor:
+# output eDP-1 mode 1920x1080 position 0,0
+# output HDMI-A-1 disable
+# output eDP-1 transform 90
+# output eDP-1 background /usr/share/backgrounds/archlinux/arch-linux-wallpaper.jpg fill
+# output eDP-1 dpms off # Turn off display power management
+
+# --- Input Configuration ---
+
+# Input devices
+# Find your input device names with `swaymsg -t get_inputs`.
+# Example for a keyboard:
+# input "1:1:AT_Translated_Set_2_keyboard" {
+#   xkb_layout us
+#   xkb_variant colemak
+# }
+input "type:keyboard" {
+  xkb_layout us
+  # xkb_variant intl
+  # xkb_options ctrl:nocaps # Swap Ctrl and Caps Lock
+}
+
+# Example for a mouse:
+input "type:pointer" {
+  accel_profile flat # or adaptive, default
+  natural_scroll enable
+}
+
+# Example for a touchpad:
+# input "type:touchpad" {
+#   dwt enabled       # Disable while typing
+#   tap enabled       # Enable tap to click
+#   natural_scroll enabled
+#   scroll_factor 0.5 # Adjust scroll speed
+# }
+
+# --- Look and Feel ---
+
+# Gaps between windows and borders
+gaps inner 5
+gaps outer 0
+# Width of the window borders in pixels
+border_pixel 2
+default_border pixel 2
+default_floating_border pixel 2
+
+# Colors for borders, title bars, and text.
+# Arc-Dark colors are common for dark themes.
+#                       border  b-bg    b-txt   i-bg    i-txt
+client.focused          #6e99bc #6e99bc #ffffff #2f343f #ffffff
+client.focused_inactive #333333 #5f676a #ffffff #2f343f #ffffff
+client.unfocused        #333333 #222222 #888888 #292d3e #888888
+client.placeholder      #000000 #000000 #ffffff #000000 #ffffff
+client.urgent           #ff0000 #ff0000 #ffffff #92343a #ffffff
+client.background       #3f3f3f
+
+# Font for window titles and workspace labels
+font pango:JetBrainsMono Nerd Font 10
+
+# Scale factor for HiDPI displays (e.g., 2 for 2x scaling)
+# output * scale 2
+# output * scale_filter bilinear
+
+# --- Workspace Management ---
+
+# Define names for your workspaces. You can use icons here too.
+# For Nerd Fonts icons, you'll need a Nerd Font installed and configured.
+# Example: font pango:Noto Sans Mono Nerd Font 10
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Bindings for switching workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Switch to the workspace on the right/left
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
+
+# Move focused container to the right/left workspace
+bindsym $mod+Shift+Left move container to workspace prev
+bindsym $mod+Shift+Right move container to workspace next
+
+# Auto-back-and-forth between current and previous workspace
+bindsym $mod+Tab workspace back_and_forth
+
+# --- Layout Management ---
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# Toggle floating mode for the focused container
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus with next/previous window (in a stack/tabbed layout)
+bindsym $mod+s focus mode_toggle
+
+# Change container layout (stacking, tabbed, split)
+bindsym $mod+v layout toggle split
+bindsym $mod+t layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+e layout toggle split
+
+# Make the focused container a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show/hide scratchpad
+bindsym $mod+minus scratchpad show
+
+# --- Window Navigation and Resizing ---
+
+# Focus direction (Left/Down/Up/Right)
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused container (Left/Down/Up/Right)
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Resize focused container (using arrow keys or hjkl)
+mode "resize" {
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
+
+  bindsym h resize shrink width 10px
+  bindsym j resize grow height 10px
+  bindsym k resize shrink height 10px
+  bindsym l resize grow width 10px
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# --- System Bindings ---
+
+# Reload the configuration file
+bindsym $mod+Shift+r reload
+
+# Exit Sway (will usually prompt for confirmation via a bar, or just close)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+# Close focused application
+bindsym $mod+Shift+q kill
+
+# Lock screen
+bindsym $mod+l exec swaylock
+
+# Screenshot
+bindsym Print exec grim # Full screen
+bindsym $mod+Print exec grim -g "$(slurp)" # Select area with slurp
+
+# Volume control
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Brightness control (requires brightnessctl or similar)
+# sudo pacman -S brightnessctl
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# --- Application Launchers ---
+
+# Launch terminal
+bindsym $mod+Return exec $term
+
+# Launch menu (Wofi)
+bindsym $mod+d exec $menu
+
+# --- Idle and Lock Settings ---
+
+# Run swayidle to manage idle behavior
+# - After 300 seconds (5 min) of inactivity, lock the screen using swaylock.
+# - After 600 seconds (10 min) of inactivity, turn off the screen.
+# - Before waking up, turn the screen back on.
+exec swayidle \
+  timeout 300 'swaylock -f' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f'
+
+# --- Theming (using xrdb for Xwayland apps) ---
+# If you run Xwayland apps, you might want to set Xresources.
+# This needs `xorg-xresource` package: `sudo pacman -S xorg-xresource`
+# exec xrdb ~/.Xresources # Uncomment and create this file if needed.
+# For example, in ~/.Xresources:
+# XTerm*background: #282828
+# XTerm*foreground: #ebdbb2
+# XTerm*faceName: Fira Code
+# XTerm*faceSize: 11
