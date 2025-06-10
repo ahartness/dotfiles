@@ -11,7 +11,7 @@
 set $mod Mod4
 
 # Your preferred terminal emulator. Alacritty is a good Wayland-native option.
-set $term kitty 
+set $term ghostty 
 
 # Your preferred application launcher. Wofi is Wayland-native.
 set $menu wofi --show drun
