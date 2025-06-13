@@ -27,6 +27,10 @@ vim.keymap.set("v", ">", ">gv", {desc = "Indent Right in visual mode"})
 -- Open Mason Config
 vim.keymap.set("n", "<leader>cm", ":Mason<cr>", {desc = "Open Mason"})
 
+-- Vim motions changes
+vim.keymap.set("n", "J", "10j", {desc="Move Down 10 lines with J"})
+vim.keymap.set("n", "K", "10k", {desc="Move up 10 lines with J"})
+
 -- Quick ESC
 -- vim.keymap.set("i", "jk", "<Esc>", {desc = "Quick ESC"})
 -- vim.keymap.set("i", "kj", "<Esc>", {desc = "Quick ESC"})
