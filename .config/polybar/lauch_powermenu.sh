@@ -8,7 +8,8 @@ REBOOT_CMD="systemctl reboot"
 SHUTDOWN_CMD="systemctl poweroff"
 
 # Define the menu options. Use newline characters for each option.
-OPTIONS="Kill\nLock\nLogout\nReboot\nShutdown"
+# OPTIONS="Kill\nLock\nLogout\nReboot\nShutdown"
+OPTIONS="Lock\nLogout\nReboot\nShutdown"
 
 # Use Rofi to display the menu and capture the user's choice.
 # -dmenu: Run in dmenu mode (text input/selection).
