@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Customize your lock command and other commands
-LOCK_CMD="i3lock -i ~/.config/i3/lockscreen.png" # Replace with your lock command, or just 'i3lock'
+KILL_CMD="ps -u $USER -o pid,comm,%cpu,%mem | dmenu -i -c -l 10 -p Kill: | awk '{print $1}' | xargs -r kill"
+LOCK_CMD="i3lock -i ~/.config/i3/background/mount-background.png" # Replace with your lock command, or just 'i3lock'
 LOGOUT_CMD="i3-msg exit"
 REBOOT_CMD="systemctl reboot"
 SHUTDOWN_CMD="systemctl poweroff"
 
 # Define the menu options. Use newline characters for each option.
-OPTIONS="Lock\nLogout\nReboot\nShutdown"
+OPTIONS="Kill\nLock\nLogout\nReboot\nShutdown"
 
 # Use Rofi to display the menu and capture the user's choice.
 # -dmenu: Run in dmenu mode (text input/selection).
@@ -18,6 +19,9 @@ OPTIONS="Lock\nLogout\nReboot\nShutdown"
 CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -i -p "Power Menu:" -config ~/.config/rofi/config.rasi)
 
 case "$CHOICE" in
+    "Kill")
+        ${KILL_CMD}
+        ;;
     "Lock")
         ${LOCK_CMD}
         ;;
