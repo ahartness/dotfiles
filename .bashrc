@@ -7,6 +7,7 @@
     . /usr/share/bash-completion/bash_completion
 
  # Directory Aliases
+ alias z='cd'
  alias ls='ls --color=auto'
  alias ll='ls -l --color=auto'
  alias grep='grep --color=auto'
@@ -23,6 +24,12 @@
  alias gp='git pull'
  alias gpush='git push'
  
+# Tmux aliases
+alias t='tmux attach || tmux new-session'
+alias ta='tmux attach -t'
+alias tn='tmux new-session'
+alias tl='tmux list-sessions'
+
  PS1='[\u@\h \W]\$ '
  
 # source /usr/share/nvm/init-nvm.sh
