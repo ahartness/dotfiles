@@ -10,6 +10,7 @@ set $smod                       Shift
 set $wm_font                    JetBrainsMono Nerd Font
 set $wm_font_size               14 
 set $wm_terminal                kitty
+set $wm_terminal_2              ghostty
 set $wm_browser                 firefox
 set $wm_app_launcher            rofi
 set $wm_compositor              picom
@@ -88,7 +89,7 @@ for_window [class="UHK Agent"] floating enable
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec $wm_terminal 
+bindsym $mod+Return exec $wm_terminal_2
 bindsym $mod+Shift+Return exec $wm_browser 
 
 # kill focused window
