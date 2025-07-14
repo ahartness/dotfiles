@@ -28,6 +28,11 @@ alias gcm='git commit -m'
 alias gp='git pull'
 alias gpush='git push'
 
+# fzf with git checkout, TODO: need to fix this
+# gch() {
+#  git checkout “$(git branch | fzf| tr -d ‘[:space:]’)”
+# }
+
 alias lla='ls -la --color=auto'
 alias lld='ls -ld */ --color=auto'
 alias python='python3'
