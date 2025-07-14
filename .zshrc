@@ -8,22 +8,22 @@ export GOPATH=$HOME/xxxxx
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 
-eval "$(brew --prefix)/bin/oh-my-posh"
+#eval "$(brew --prefix)/bin/oh-my-posh"
 # Load Oh My Zsh Theme
-eval "$(oh-my-posh init zsh --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
+eval "$(oh-my-posh --init --shell zsh --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
 
 # Directory Aliases
 alias ll='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias lla='ls -la --color=auto'
 alias vim='nvim'
-alias nv='nvim'
-alias dev='cd ~/Developer'
+alias nv='nvim .'
+alias dev='cd ~/workspace'
 alias dotfiles='cd ~/dotfiles'
 
 # Git Aliases
 alias gs='git status'
-alias gadd='git add .'
+alias ga='git add .'
 alias gcm='git commit -m'
 alias gp='git pull'
 alias gpush='git push'
@@ -38,6 +38,7 @@ alias t='tmux attach || tmux new-session'
 alias ta='tmux attach -t'
 alias tn='tmux new-session'
 alias tl='tmux list-sessions'
+alias tk='tmux kill-session -t'
 
 # exa for better ls 
 alias ls='eza --icons=always'
@@ -46,7 +47,6 @@ alias ls='eza --icons=always'
 eval "$(zoxide init zsh)"
 alias cd='z'
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # history setup
@@ -64,6 +64,9 @@ bindkey '^[[B' history-search-forward
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Enable fzf for zsh
+source <(fzf --zsh)
 
 # Created by `pipx` on 2024-12-11 01:29:36
 export PATH="$PATH:/Users/andrewhartness/.local/bin"

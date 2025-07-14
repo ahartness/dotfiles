@@ -13,13 +13,13 @@
  alias grep='grep --color=auto'
  alias lla='ls -la --color=auto'
  alias vim='nvim'
- alias nv='nvim'
- alias dev='cd ~/Developer'
+ alias nv='nvim .'
+ alias dev='cd ~/workspace'
  alias dotfiles='cd ~/dotfiles'
 
  # Git Aliases
  alias gs='git status'
- alias gadd='git add .'
+ alias ga='git add .'
  alias gcm='git commit -m'
  alias gp='git pull'
  alias gpush='git push'
@@ -29,6 +29,7 @@ alias t='tmux attach || tmux new-session'
 alias ta='tmux attach -t'
 alias tn='tmux new-session'
 alias tl='tmux list-sessions'
+alias tk='tmux kill-session -t'
 
  PS1='[\u@\h \W]\$ '
  
@@ -41,4 +42,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Init oh-my-posh and set theme
 eval "$(oh-my-posh --init --shell bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
+
+# Initialize fzf 
+eval "$(fzf --bash)"
 
