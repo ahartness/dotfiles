@@ -10,7 +10,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 #eval "$(brew --prefix)/bin/oh-my-posh"
 # Load Oh My Zsh Theme
-eval "$(oh-my-posh --init --shell zsh --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/half-life.omp.json')"
+eval "$(oh-my-posh --init --shell zsh --config '~/.config/ohmyposh/half-life.omp.json')"
 
 # Directory Aliases
 alias ll='ls -l --color=auto'
