@@ -15,9 +15,13 @@ set $wm_browser                 firefox
 set $wm_app_launcher            rofi
 set $wm_compositor              picom
 
-set $wm_monitor_resolution      3440x1440
-set $wm_monitor_refresh_rate    144
+# 16:9 Monitor
+set $wm_monitor_resolution      2560x1440
+set $wm_monitor_refresh_rate    180
 set $wm_monitor_name            DP-4
+# UltraWide Monitor
+#set $wm_monitor_resolution      3440x1440
+#set $wm_monitor_refresh_rate    144
 
 # Execute picom on startup
 exec --no-startup-id $wm_compositor 
