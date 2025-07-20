@@ -16,12 +16,14 @@ set $wm_app_launcher            rofi
 set $wm_compositor              picom
 
 # 16:9 Monitor
-set $wm_monitor_resolution      2560x1440
-set $wm_monitor_refresh_rate    180
-set $wm_monitor_name            DP-4
+set $wm_moniter_2_res           2560x1440
+set $wm_monitor_2_refresh_rate  144
+set $wm_monitor_2_name            HDMI-0
+
 # UltraWide Monitor
-#set $wm_monitor_resolution      3440x1440
-#set $wm_monitor_refresh_rate    144
+set $wm_monitor_resolution      3440x1440
+set $wm_monitor_refresh_rate    144
+set $wm_monitor_name            DP-4
 
 # Execute picom on startup
 exec --no-startup-id $wm_compositor 
@@ -39,6 +41,13 @@ font pango:$wm_font $wm_font_size
 
 # This sets the monitor display with the correct resolution and refresh rate
 exec --no-startup-id xrandr --output $wm_monitor_name --primary --mode $wm_monitor_resolution --rate $wm_monitor_refresh_rate
+
+# Setup second monitor if you have one
+exec --no-startup-id xrandr --output $wm_monitor_2_name --mode $wm_monitor_2_res --rate $wm_monitor_2_refresh_rate --right-of $wm_monitor_name
+
+# Workspaces for dual monitor setups.
+workspace 1 output $wm_monitor_name
+workspace 2 output $wm_monitor_2_name
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
