@@ -1,3 +1,4 @@
 confirm-close-surface=false
 font-size=14
 window-decoration=server
+app-notification= clipboard-copy=false
