@@ -40,7 +40,7 @@ exec_always --no-startup-id feh --bg-scale ~/.config/backgrounds/mountains.png
 font pango:$wm_font $wm_font_size 
 
 # This sets the monitor display with the correct resolution and refresh rate
-exec --no-startup-id xrandr --output $wm_monitor_name --primary --mode $wm_monitor_resolution --rate $wm_monitor_refresh_rate
+exec --no-startup-id xrandr --output $wm_monitor_name --primary --mode $wm_monitor_resolution --rate $wm_monitor_refresh_rate --left-of $wm_monitor_2_name
 
 # Setup second monitor if you have one
 exec --no-startup-id xrandr --output $wm_monitor_2_name --mode $wm_monitor_2_res --rate $wm_monitor_2_refresh_rate --right-of $wm_monitor_name
@@ -80,6 +80,9 @@ exec --no-startup-id nm-applet
 
 # Dunst is a lightweight notification daemon that works well with i3.
 exec --no-startup-id dunst
+
+# Bluetooth support is provided by blueman, which is a GTK+ Bluetooth manager.
+exec --no-startup-id blueman-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
