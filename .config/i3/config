@@ -99,6 +99,8 @@ for_window [class="pavucontrol"] floating enable
 #for_window [class="Spotify"] floating enable
 for_window [class="UHK Agent"] floating enable
 #for_window [class="qBittorrent"] floating enable
+for_window [class="Bluetooth Manager"] floating enable
+for_window [class="Bluetooth Devices"] floating enable
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
