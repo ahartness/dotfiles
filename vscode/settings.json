@@ -19,6 +19,7 @@
   "editor.bracketPairColorization.enabled": true,
   // Workbench Settings
   "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
   "diffEditor.renderSideBySide": false,
   "breadcrumbs.enabled": false,
   // Extensions Settings
