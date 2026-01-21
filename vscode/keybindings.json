@@ -8,8 +8,8 @@
     "command": "runCommands",
     "args": {
       "commands": [
-        "workbench.action.files.save",
-        "editor.action.formatDocument"
+        "workbench.action.files.save"
+        // "editor.action.formatDocument"
       ]
     },
     "when": "vim.mode == 'Normal' && editorTextFocus"
