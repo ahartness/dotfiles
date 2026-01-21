@@ -1,4 +1,5 @@
 // Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaults
 [
   // =============================
   // ======= LEADER BINDS ========
@@ -9,7 +10,7 @@
     "args": {
       "commands": [
         "workbench.action.files.save"
-        // "editor.action.formatDocument"
+        // "editor.action.formatDocument",
       ]
     },
     "when": "vim.mode == 'Normal' && editorTextFocus"
@@ -43,7 +44,7 @@
     "when": "vim.mode == 'Normal' && editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "space g s", // [G]o to [S]ymbol
+    "key": "space f s", // [F]ind [S]ymbol
     "command": "workbench.action.gotoSymbol",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -101,6 +102,11 @@
     "key": "space c f", // [C]ode [F]ormat
     "command": "editor.action.formatDocument",
     "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space r t", // [R]un [T]asks
+    "command": "workbench.action.tasks.runTask",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   // ================================
   // ======= PANE MANAGEMENT ========
