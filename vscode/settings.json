@@ -1,0 +1,151 @@
+{
+  // Windows Settings
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  "window.zoomLevel": 0.5,
+  // Editor Settings
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [80, 100],
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.bracketPairColorization.enabled": true,
+  // Workbench Settings
+  "workbench.sideBar.location": "right",
+  "diffEditor.renderSideBySide": false,
+  "breadcrumbs.enabled": false,
+  // Extensions Settings
+  "extensions.experimental.affinity": {
+    "vscode.vim": 1
+  },
+  // Vim basic settings
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.leader": " ",
+  "vim.neovimUseConfigFile": true,
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": "/Users/andrewhartness/.config/nvim/init.lua",
+  "vim.neovimPath": "/Users/andrewhartness/.config/nvim",
+  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/Users/andrewhartness/.config/nvim/init.lua",
+  // Vim Bindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>"],
+      "when": ["editorFocus"],
+      "commands": [":nohl"],
+      "silent": true
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["editor.action.goToDeclaration"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["K"],
+      "commands": [
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "up",
+            "by": "line",
+            "value": 10
+          }
+        }
+      ]
+    },
+    {
+      "before": ["J"],
+      "commands": [
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "down",
+            "by": "line",
+            "value": 10
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": "#"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": "%"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "s", "c"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "c", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.activityBar.location": "top"
+}

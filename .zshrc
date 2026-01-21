@@ -14,6 +14,8 @@ eval "$(oh-my-posh --init --shell zsh --config '~/.config/ohmyposh/half-life.omp
 
 # Directory Aliases
 alias ll='ls -l --color=auto'
+alias ls='ls -l --color=auto'
+alias lsa='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias lla='ls -la --color=auto'
 alias vim='nvim'
@@ -46,7 +48,7 @@ alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t'
 
 # exa for better ls 
-alias ls='eza --icons=always'
+alias ls='eza -l --icons=always'
 
 # --- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
