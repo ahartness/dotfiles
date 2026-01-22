@@ -58,7 +58,12 @@
   },
   {
     "key": "space f g", // [F]ind [G]rep,
-    // "command": "workbench.action.findInFiles", // This one used base-line VS Code search
+    // "command": "workbench.action.findInFiles",
+    "command": "periscope.search", // Needs Periscope Extension installed
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space /", // Visual Fuzzy Search
     "command": "fuzzySearch.activeTextEditor", // Use this one only if fuzzy-search is installed
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
