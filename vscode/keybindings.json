@@ -168,7 +168,8 @@
   },
   {
     "key": "space a c",
-    "command": "workbench.action.chat.toggle",
+    // "command": "workbench.action.chat.toggle",
+    "command": "workbench.action.chat.attachFileToChat",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus",
   },
   {
