@@ -7,10 +7,10 @@
   "editor.fontSize": 14,
   "editor.lineHeight": 22,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 100,
-  "editor.rulers": [80, 100],
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [100, 120],
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
   "editor.fontFamily": "JetBrains Mono",
@@ -55,15 +55,15 @@
     },
     {
       "before": ["<leader>", "g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "commands": ["editor.action.goToImplementation"],
     },
     {
       "before": ["<leader>", "g", "d"],
-      "commands": ["editor.action.goToDeclaration"]
+      "commands": ["editor.action.goToDeclaration"],
     },
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "commands": ["workbench.action.toggleSidebarVisibility"],
     },
     {
       "before": ["K"],
@@ -73,10 +73,10 @@
           "args": {
             "to": "up",
             "by": "line",
-            "value": 10
-          }
-        }
-      ]
+            "value": 10,
+          },
+        },
+      ],
     },
     {
       "before": ["J"],
@@ -86,67 +86,68 @@
           "args": {
             "to": "down",
             "by": "line",
-            "value": 10
-          }
-        }
-      ]
+            "value": 10,
+          },
+        },
+      ],
     },
     {
       "before": ["<leader>", "s", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpen"],
     },
     {
       "before": ["<leader>", "s", "v"],
       "commands": [
         {
           "command": "workbench.action.quickOpen",
-          "args": "#"
-        }
-      ]
+          "args": "#",
+        },
+      ],
     },
     {
       "before": ["<leader>", "s", "g"],
       "commands": [
         {
           "command": "workbench.action.quickOpen",
-          "args": "%"
-        }
-      ]
+          "args": "%",
+        },
+      ],
     },
     {
       "before": ["<leader>", "s", "c"],
-      "commands": ["workbench.action.showCommands"]
+      "commands": ["workbench.action.showCommands"],
     },
     {
       "before": ["<leader>", "c", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "commands": ["editor.action.formatDocument"],
     },
     {
       "before": ["L"],
-      "commands": ["workbench.action.nextEditor"]
+      "commands": ["workbench.action.nextEditor"],
     },
     {
       "before": ["H"],
-      "commands": ["workbench.action.previousEditor"]
-    }
+      "commands": ["workbench.action.previousEditor"],
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["J"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "commands": ["editor.action.moveLinesDownAction"],
     },
     {
       "before": ["K"],
-      "commands": ["editor.action.moveLinesUpAction"]
-    }
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
   ],
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
 }
+
