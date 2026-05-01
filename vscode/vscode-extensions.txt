@@ -1,0 +1,13 @@
+Docker
+ESLint
+MarkDown Lint
+Even Better TOML
+Github Actions
+godot-tools
+Go
+Material Icon Theme
+Periscope
+Prettier
+Tailwind CSS Intellisense
+VIM
+Todo Tree

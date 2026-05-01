@@ -33,6 +33,12 @@ stow .
 
 These configs are tuned for my workflow and machine, so they may assume tools, paths, or conventions that are specific to my setup.
 
+## Carryover setups
+
+Walker & Waybar for Hyprland
+Satty for Photo annotations
+Use the Omarchy github page to pull use some of those binaries
+
 ## Future TODO Items
 
 - [ ] Create a custom config for oh-my-posh -> `~/.config/ohmyposh/..config.json`
