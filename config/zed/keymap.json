@@ -1,0 +1,93 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space /": "pane::DeploySearch",
+      "space c p": "command_palette::Toggle",
+      "space g d": "editor::GoToDefinition",
+      "space g r": "editor::GoToNextReference",
+      "space g i": "editor::GoToImplementation",
+      "space v": "pane::SplitRight",
+      "space b": "pane::SplitDown",
+      "shift-j": ["editor::MoveDownByLines", { "lines": 10 }],
+      "shift-k": ["editor::MoveUpByLines", { "lines": 10 }],
+
+      // Buffers
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "space t": "pane::CloseOtherItems",
+
+      // File Tree
+      "space e": "project_panel::Toggle",
+
+      //Chat / AI
+      "space a c": "agent::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      // ======= PANE MANAGEMENT ========
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // ======= FILE TREE NAVIGATION ========
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "enter": "project_panel::Open",
+      "space e": "workspace::ToggleLeftDock",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-shift-q": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-shift-j": "terminal_panel::Toggle",
+    },
+  },
+]
