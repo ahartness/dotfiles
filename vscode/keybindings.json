@@ -300,6 +300,11 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus",
   },
+  {
+    "key": "alt+shift+-",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus",
+  }
   // =======================
   // ======= EDITOR ========
   // =======================
@@ -314,12 +319,12 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
   },
   {
-    "key": "tab",
+    "key": "shift+]",
     "command": "-acceptSelectedSuggestion",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
   },
   {
-    "key": "shift+tab",
+    "key": "shift+[",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
   },
@@ -329,7 +334,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
   },
   {
-    "key": "tab",
+    "key": "shift+tab",
     "command": "quickInput.next",
     "when": "inQuickInput && quickInputType == 'quickPick'",
   },
