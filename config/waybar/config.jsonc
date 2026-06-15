@@ -1,17 +1,47 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 26, // Waybar height (to be removed for auto height)
-    // Archived modules
-    // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
-    // Choose the order of the modules
-    "modules-left": [ "clock", "custom/pacman", "custom/nordvpn"],
-    "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "cpu", "temperature", "pulseaudio", "bluetooth", "tray"],
-    // Modules configuration
+  "include": [
+    "$HOME/dotfiles/config/waybar/custom_modules/custom_workspaces.jsonc"
+  ],
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  // "height": 26, // Waybar height (to be removed for auto height)
+  // Archived modules
+  // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/icon",
+    "hyprland/workspaces#rw",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    // "hyprland/workspaces",
+    "clock",
+    "custom/pacman"
+  ],
+  "modules-right": [
+    "custom/nordvpn",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "bluetooth",
+    "tray"
+  ],
+  // Modules configuration
+  "custom/icon": {
+    "format": ""
+  },
+  "hyprland/window": {
+    "seperate-outputs": true,
+    "max-length": 150
+  },
   "hyprland/workspaces": {
-    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
     "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
       "default": "",
       "1": "1",
@@ -35,112 +65,118 @@
       "8": []
     }
   },
-    "bluetooth": {
-        "interval": 30,
-        "format": "{icon}",
-        // "format-alt": "{status}",
-        "format-icons": {
-            "enabled": "",
-            "disabled": ""
-        },
-        "on-click": "echo 'Bluetooth app not setup'" // change this later
-    },    
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": "true"
+  "bluetooth": {
+    "interval": 30,
+    "format": "{icon}",
+    // "format-alt": "{status}",
+    "format-icons": {
+      "enabled": "",
+      "disabled": ""
     },
-    "tray": {
-        //"icon-size": 11,
-        "spacing": 5
+    "on-click": "blueberry"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
     },
-    "clock": {
-        "format": "  {:%H:%M    %e %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>",
-        // "on-click": "gnome-calendar"
+    "tooltip": "true"
+  },
+  "tray": {
+    "icon-size": 11,
+    "spacing": 5
+  },
+  "clock": {
+    // "format": "  {:%H:%M    %e %b}",
+    "format": "  {:L%I:%M %p     %A %B %d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "today-format": "<b>{}</b>"
+    // "on-click": "gnome-calendar"
+    // "format": "{:L%A %B %d - %I:%M %p}",
+  },
+  "cpu": {
+    "interval": "1",
+    "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+    "max-length": 13,
+    "min-length": 13,
+    "on-click": "ghostty -e htop --sort-key PERCENT_CPU",
+    "tooltip": false
+  },
+  "temperature": {
+    //"thermal-zone": 1,
+    "interval": "4",
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "critical-threshold": 74,
+    "format-critical": "  {temperatureC}°C",
+    "format": "{icon}  {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "max-length": 7,
+    "min-length": 7
+  },
+  "network": {
+    // "interface": "wlan0", // (Optional) To force the use of this interface,
+    "format-wifi": "  {essid}",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "family": "ipv4",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}"
+  },
+  "pulseaudio": {
+    "scroll-step": 3, // %, can be a float
+    "format": "{icon}   {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source} ",
+    "format-muted": " {format_source} ",
+    //"format-source": "{volume}% ",
+    //"format-source-muted": "",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
-    "cpu": {
-        "interval": "1",      
-        "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "max-length": 13,
-        "min-length": 13,
-        "on-click": "ghostty -e htop --sort-key PERCENT_CPU",
-        "tooltip": false
-    },
-    "temperature": {
-        //"thermal-zone": 1,
-        "interval": "4",
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-        "critical-threshold": 74,
-        "format-critical": "  {temperatureC}°C",
-        "format": "{icon}  {temperatureC}°C",
-        "format-icons": ["", "", ""],
-        "max-length": 7,
-        "min-length": 7
-    },
-    "network": {
-        // "interface": "wlan0", // (Optional) To force the use of this interface,
-        "format-wifi": "  {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "family": "ipv4",
-        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}"
-    },
-    "pulseaudio": {
-        "scroll-step": 3, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        //"format-source": "{volume}% ",
-        //"format-source-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol",
-        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    },
-    "custom/pacman": {
-        "format": "+{}",
-        "interval": 3600,                     // every hour
-        "exec": "checkupdates | wc -l",       // # of updates
-        "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "ghostty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8,
-        "max-length": 5,
-        "min-length": 3
-    },
-    "custom/weather": {
-        "exec": "curl 'https://wttr.in/?format=0'",
-        "interval": 3600
-    },
-    "custom/cpugovernor": {
-      "format": "{icon}",
-      "interval": "30",
-      "return-type": "json",
-      "exec": "$HOME/.config/waybar/custom_modules/cpu_governor.sh",
-      "min-length": 2,
-      "max-length": 2,
-        "format-icons": {
-            "perf": "",
-            "sched": ""
-        },
-    },    
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+  "custom/pacman": {
+    "format": "+{}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "on-click": "ghostty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8,
+    "max-length": 5,
+    "min-length": 3
+  },
+  "custom/cpugovernor": {
+    "format": "{icon}",
+    "interval": "30",
+    "return-type": "json",
+    "exec": "$HOME/.config/waybar/custom_modules/cpu_governor.sh",
+    "min-length": 2,
+    "max-length": 2,
+    "format-icons": {
+      "perf": "",
+      "sched": ""
+    }
+  },
   "custom/nordvpn": {
     "format": "{}",
     "return-type": "json",
@@ -149,17 +185,5 @@
     "on-click": "~/.config/waybar/custom_modules/connect_nordvpn.sh",
     "on-click-right": "nordvpn disconnect",
     "tooltip": true
-  },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
+  }
 }

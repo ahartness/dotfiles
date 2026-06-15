@@ -60,9 +60,9 @@
 /* Reset all styles */
 * {
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     min-height: 0;
-    margin: 0.2em 0.3em 0.2em 0.3em;
+    margin: 0.01em 0.2em 0.01em 0.2em;
 }
 
 /* The whole bar */
@@ -88,6 +88,7 @@
 #custom-pacman,
 #custom-weather,
 #custom-gpu,
+#custom-icon,
 #tray,
 #backlight,
 #language,
@@ -139,6 +140,14 @@
     animation-duration: 3s;
 }
 
+#custom-icon {
+    font-size: 1.5em;
+    padding: 0;
+    margin-right: 0.75em;
+    margin-left: 0.5em;
+    border-right: @nord_light_font;
+}
+
 /* And now modules themselves in their respective order */
 
 #mode { /* Shown current Sway mode (resize etc.) */
@@ -148,36 +157,51 @@
 
 /* Workspaces stuff */
 
-#workspaces {
-    color: @light;
-    margin-right: 5px;
+#workspaces button {
+  all: initial;
+  color: @light;
+  padding: 0 6px;
+  margin: 0 1px;
+  min-width: 9px;
+  font-size: 1.5em;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
 }
 
 #workspaces button {
-    font-weight: bold; /* Somewhy the bar-wide setting is ignored*/
-    padding: 0;
+    font-weight: bold; 
     color: @nord_light_font;
     opacity: 0.3;
     background: none;
-    font-size: 1em;
+    /* font-size: 1.3em; */
 }
 
-#workspaces button.focused {
-    background: @workspacesfocused;
-    color: @nord_light_font;
+#workspaces button.active {
+    background: @nord_dark;
+    color: @nord_light;
     opacity: 1;
-    padding: 0 0.4em;
 }
+
+/* #workspaces {
+    color: @light;
+    margin-right: 2px; 
+}
+
+
+
+
 
 #workspaces button.urgent {
     border-color: #c9545d;
     color: #c9545d;
     opacity: 1;
-}
+} */
 
 #window {
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
     font-weight: normal;
 }
 #bluetooth {

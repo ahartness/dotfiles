@@ -2,8 +2,8 @@ configuration{
     modi:                   "drun";
     font:                   "Terminus 14";
     icon-theme:             "Papirus";
-    show-icons:             true;
-    terminal:               "kitty";
+    show-icons:             false;
+    terminal:               "ghostty";
     display-drun:           " ";
     drun-display-format:    "{icon} {name}";
     location:               0;
@@ -13,16 +13,16 @@ configuration{
     sidebar-mode:           false;
 }
 
-@import "colors.rasi"
+@theme "/home/hrtns/.config/rofi/themes/rounded-nord-dark.rasi"
 
 window {
     transparency:           "real";
-    background-color:       @bg;
-    text-color:             @fg;
+    // background-color:       @bg;
+    // text-color:             @fg;
     border:                 0px 0px 0px 0px;
-    border-color:           @ac;
-    border-radius:          0px;
-    width:                  700px;
+    // border-color:           @ac;
+    border-radius:          10px;
+    width:                  500px;
     location:               center;
     x-offset:               0;
     y-offset:               0;
@@ -31,58 +31,59 @@ window {
 prompt {
     enabled:                true;
     padding:                0px;
-    background-color:       @bga;
-    text-color:             @ac;
+    // background-color:       @bga;
+    // text-color:             @ac;
     font:                   "feather 12";
 }
 
 entry {
-    background-color:       @al;
-    text-color:             @fg;
-    placeholder-color:      @fg;
+    // background-color:       @al;
+    // text-color:             #D8DEE9;
+    placeholder-color:      #ECEFF4;
     expand:                 true;
     horizontal-align:       0;
     placeholder:            "Search...";
-    padding:                0px 0px 0px 5px;
+    padding:                0px 0px 0px 10px;
     blink:                  true;
+    hide-cursor-on-empty:   true;
 }
 
 inputbar {
     children:               [ prompt, entry ];
-    background-color:       @bga;
-    text-color:             @fg;
+    // background-color:       @bga;
+    // text-color:             @fg;
     expand:                 false;
-    border:                 0px 0px 1px 0px;
-    border-radius:          0px;
-    border-color:           @se;
+    border:                 1px 1px 1px 1px;
+    border-radius:          10px;
+    // border-color:           @se;
     margin:                 0px;
     padding:                10px;
 }
 
 listview {
-    background-color:       @bg;
+    // background-color:       @bg;
     padding:                0px;
     columns:                1;
     lines:                  6;
     spacing:                5px;
     cycle:                  true;
-    dynamic:                true;
+    dynamic:                false;
     layout:                 vertical;
 }
 
 mainbox {
-    background-color:       @al;
+    // background-color:       @al;
     border:                 0px;
     border-radius:          0px;
-    border-color:           @ac;
+    // border-color:           @ac;
     children:               [ inputbar, listview ];
     spacing:                5px;
     padding:                5px;
 }
 
 element {
-    background-color:       @al;
-    text-color:             @fg;
+    // background-color:       @al;
+    // text-color:             @fg;
     orientation:            horizontal;
     border-radius:          0px;
     padding:                8px 8px 8px 8px;
@@ -105,9 +106,9 @@ element-text {
 }
 
 element selected {
-    background-color:       @se;
-    text-color:             @bg;
+    // background-color:       @se;
+    // text-color:             @bg;
     border:                 0px 0px 0px 0px;
     border-radius:          0px;
-    border-color:           @ac;
+    // border-color:           @ac;
 }
