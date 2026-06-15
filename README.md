@@ -39,3 +39,4 @@ These configs are tuned for my workflow and machine, so they may assume tools, p
 - [ ] Add a script to automate the installation process
 - [ ] Update these with my current setup as the files have become outdated for Hyprland
 - [ ] Update nvim config to work with new 0.12 update
+- [ ] Figure out how to symlink Zed and VSCode/VSCodium
