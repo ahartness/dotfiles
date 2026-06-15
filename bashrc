@@ -1,25 +1,28 @@
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] return
 
-# Use bash-completion if available
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
+# Use bash-completion, if available, and avoid double-sourcing
+[[ $PS1 &&
+  ! ${BASH_COMPLETION_VERSINFO:-} &&
+  -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
+
+# Case insensitive tab-completion
+set completion-ignore-case on
 
 # Directory Aliases
 alias z='cd'
-alias ls='ls --color=auto'
-alias ll='ls -l --color=auto'
+alias ls='ls -l --color=auto'
+alias ll='ls -la --color=auto'
 alias grep='grep --color=auto'
-alias lla='ls -la --color=auto'
-alias vim='nvim'
 alias nv='nvim .'
-alias dev='cd ~/workspace'
 alias dotfiles='cd ~/dotfiles'
 
 # Git Aliases
 alias gs='git status'
 alias ga='git add .'
 alias gcm='git commit -m'
+alias gcam='git commit -am'
 alias gp='git pull'
 alias gpush='git push'
 
@@ -44,3 +47,6 @@ eval "$(oh-my-posh --init --shell bash --config '~/.config/ohmyposh/half-life.om
 
 # Initialize fzf
 eval "$(fzf --bash)"
+
+# opencode
+export PATH=/home/hrtns/.opencode/bin:$PATH
