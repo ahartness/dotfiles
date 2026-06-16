@@ -1,6 +1,11 @@
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] return
 
+# Hyprland uswm override
+if uwsm check may-start; then
+  exec uwsm start hyprland.desktop
+fi
+
 # Use bash-completion, if available, and avoid double-sourcing
 [[ $PS1 &&
   ! ${BASH_COMPLETION_VERSINFO:-} &&

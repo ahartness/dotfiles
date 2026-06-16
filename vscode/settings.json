@@ -13,7 +13,7 @@
   "editor.formatOnSave": false,
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.bracketPairColorization.enabled": true,
@@ -34,11 +34,11 @@
   "vim.leader": " ",
   "vim.neovimUseConfigFile": true,
   "vim.enableNeovim": true,
-  "vim.neovimConfigPath": "/Users/andrewhartness/.config/nvim/init.lua",
-  "vim.neovimPath": "/Users/andrewhartness/.config/nvim",
+  "vim.neovimConfigPath": "/home/hrtns/.config/nvim/init.lua",
+  "vim.neovimPath": "/home/hrtns/.config/nvim",
   "vim.useSystemClipboard": true,
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "/Users/andrewhartness/.config/nvim/init.lua",
+  // "vim.vimrc.enable": true,
+  // "vim.vimrc.path": "/Users/andrewhartness/.config/nvim/init.lua",
   // Vim Bindings
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -141,13 +141,9 @@
     }
   ],
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.initialHint": false
 }
-
