@@ -69,6 +69,6 @@ These configs are tuned for my workflow and machine, so they may assume tools, p
 
 ## Future TODO Items
 
-- [ ] Add in my Niri config as that will be my future daily driver
+- [*] Add in my Niri config as that will be my future daily driver
 - [ ] Update nvim config to work with new 0.12 update
 - [ ] Figure out how to symlink Zed and VSCode/VSCodium
