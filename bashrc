@@ -12,9 +12,6 @@ fi
   -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
-# Case insensitive tab-completion
-set completion-ignore-case on
-
 # Directory Aliases
 alias z='cd'
 alias ls='ls -l --color=auto'
