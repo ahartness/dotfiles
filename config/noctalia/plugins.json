@@ -1,0 +1,29 @@
+{
+    "sources": [
+        {
+            "enabled": true,
+            "name": "Noctalia Plugins",
+            "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": true,
+            "name": "Hrtns Custom Plugins",
+            "url": "https://github.com/ahartness/hrtns-noctalia-plugins"
+        }
+    ],
+    "states": {
+        "a6f833:nordvpn": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/ahartness/hrtns-noctalia-plugins"
+        },
+        "arch-updater": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "polkit-agent": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        }
+    },
+    "version": 2
+}
