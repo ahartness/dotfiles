@@ -31,8 +31,23 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space g p", // [S]ave all,
+    "key": "space g p", // [G]it [P]ull,
     "command": "git.pull",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space g c", // [G]it [C]heckout,
+    "command": "git.checkout",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space g f", // [G]it [F]etch,
+    "command": "git.fetch",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space g w", 
+    "command": "workbench.action.output.toggleOutput",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {

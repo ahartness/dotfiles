@@ -20,6 +20,9 @@ alias grep='grep --color=auto'
 alias nv='nvim .'
 alias dotfiles='cd ~/dotfiles'
 
+alias ld='lazydocker'
+alias lg='lazygit'
+
 # Git Aliases
 alias gs='git status'
 alias ga='git add .'
