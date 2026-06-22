@@ -14,4 +14,7 @@ output "DP-2" {
     mode "3440x1440@144.000" // Set resolution and refresh rate
     scale 1 // No scaling (use 2 for HiDPI)
     position x=0 y=0
+    hot-corners {
+      off
+    }
 }
