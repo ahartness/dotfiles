@@ -6,15 +6,12 @@
 
 // Single 1440p monitor configuration
 output "DP-3" {
-    mode "2560x1440@165.000" // Set resolution and refresh rate
-    scale 1 // No scaling (use 2 for HiDPI)
-    position x=0 y=1440
-    focus-at-startup
+  off
 }
 
 // Ultrawide 1440p monitor configuration
 output "DP-2" {
-    mode "3440x1440@144.000" // Set resolution and refresh rate
+    mode "1280x800@59.810" // Set resolution and refresh rate
     scale 1 // No scaling (use 2 for HiDPI)
     position x=0 y=0
 }
