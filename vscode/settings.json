@@ -146,8 +146,5 @@
   "workbench.activityBar.location": "top",
   "git.openRepositoryInParentFolders": "never",
   "terminal.integrated.initialHint": false,
-  "[qml]": {
-    "editor.defaultFormatter": "AndreOneti.qml-formatter"
-  },
   "chat.viewSessions.orientation": "stacked"
 }
