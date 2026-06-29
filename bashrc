@@ -2,9 +2,9 @@
 # [[ $- != *i* ]] return
 
 # Hyprland uswm override
-if uwsm check may-start; then
-  exec uwsm start hyprland.desktop
-fi
+# if uwsm check may-start; then
+#   exec uwsm start hyprland.desktop
+# fi
 
 # Use bash-completion, if available, and avoid double-sourcing
 [[ $PS1 &&

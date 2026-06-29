@@ -4,6 +4,7 @@
 input {
     keyboard {
         xkb {
+            options "caps:swapescape"
             //If you want to overwrite your keyboard layout,
             // uncomment the line below and change the layout accordingly.
             //layout "us" // Use the American keyboard layout
@@ -13,7 +14,8 @@ input {
 
     touchpad {
         tap // Enable tap-to-click
-        natural-scroll // Enable natural (macOS-style) scrolling
+	scroll-factor 0.5
+        // natural-scroll // Enable natural (macOS-style) scrolling
     }
 
     mouse {
