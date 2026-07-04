@@ -5,12 +5,28 @@
 local programs = require("modules.programs")
 local mainMod = "SUPER"
 
+-- Launcher Commands
+-- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
+
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(programs.terminal))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+
+-- Simple maximize bind (known bug where this does not work on scrolling layout)
+-- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 'maximized', state = "toggle" }))
+
+-- Workaround function for scrolling layout, revert to above is using dwindle
+hl.bind(mainMod .. " + F", function()
+  hl.dispatch(hl.dsp.layout("colresize +conf"))
+  hl.dispatch(hl.dsp.layout("focus r"))
+  hl.dispatch(hl.dsp.layout("focus l"))
+end, { description = "Toggle active window to maximized (scrolling)" })
+
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = 'fullscreen', action = "toggle" }))
+hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
