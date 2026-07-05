@@ -2,7 +2,7 @@
 
 # Define paths
 MONITOR_DIR="$HOME/.config/hypr/monitors"
-CURRENT_CONFIG="$HOME/.config/hypr/modules/monitor.lua"
+CURRENT_CONFIG="$HOME/.config/hypr/modules/monitors.lua"
 
 if [ "$1" == "single" ]; then
     ln -sf "$MONITOR_DIR/single.lua" "$CURRENT_CONFIG"
@@ -29,7 +29,7 @@ hyprctl reload
 
 # 2. Force window movement (optional but recommended)
 # This moves all windows to workspace 1 so they don't get lost on a disabled screen
-window_addresses=$(hyprctl clients -j | jq -r '.[].address')
-for addr in $window_addresses; do
-    hyprctl dispatch movetoworkspace 1,address:$addr
-done
+# window_addresses=$(hyprctl clients -j | jq -r '.[].address')
+# for addr in $window_addresses; do
+#     hyprctl dispatch movetoworkspace 1,address:$addr
+# done
