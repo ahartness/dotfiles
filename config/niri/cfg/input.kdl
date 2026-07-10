@@ -4,6 +4,7 @@
 input {
     keyboard {
         xkb {
+	    // Swaps caps and escape key
             // options "caps:swapescape"
             //If you want to overwrite your keyboard layout,
             // uncomment the line below and change the layout accordingly.
