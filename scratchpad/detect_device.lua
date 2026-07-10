@@ -33,6 +33,20 @@ local function get_hostname()
     return read_file("/etc/hostname") or exec("hostname")
 end
 
+local function get_manufacturer()
+    -- DMI vendor fields are the most reliable source for system make.
+    return read_file("/sys/class/dmi/id/sys_vendor")
+        or read_file("/sys/devices/virtual/dmi/id/sys_vendor")
+        or "unknown"
+end
+
+local function get_product_name()
+    -- Product/model name complements the manufacturer value.
+    return read_file("/sys/class/dmi/id/product_name")
+        or read_file("/sys/devices/virtual/dmi/id/product_name")
+        or "unknown"
+end
+
 local function get_cpu()
     local cpuinfo = read_file("/proc/cpuinfo")
     if not cpuinfo then return "unknown" end
@@ -68,6 +82,8 @@ end
 
 print("=== Device Info ===")
 print("Hostname    : " .. (get_hostname() or "unknown"))
+print("Make        : " .. get_manufacturer())
+print("Model       : " .. get_product_name())
 print("Type        : " .. device_type)
 print("Chassis ID  : " .. (get_chassis_type() or "unknown"))
 print("Battery     : " .. (battery and "yes" or "no"))
