@@ -16,7 +16,7 @@ hl.config({
 		layout = "scrolling",
 	},
 	decoration = {
-		rounding = 10,
+		rounding = 5,
 		rounding_power = 2,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
@@ -79,7 +79,7 @@ hl.config({
 	scrolling = {
 		-- Temp workaround for fullscreen/maximize
 		focus_fit_method = 1,
-		explicit_column_widths = "0.5,1"
+		explicit_column_widths = "0.5,1",
 		-- fullscreen_on_one_column = true,
 	},
 })
