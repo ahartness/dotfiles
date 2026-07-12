@@ -14,6 +14,7 @@ hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
 
 -- Simple maximize bind (known bug where this does not work on scrolling layout)
 -- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 'maximized', state = "toggle" }))
