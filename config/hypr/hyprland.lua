@@ -1,6 +1,3 @@
--- Main Hyprland entrypoint that loads the modular config.
-require("hyprland-gui")
-
 require("modules.programs")
 require("modules.input")
 require("modules.look_and_feel")
