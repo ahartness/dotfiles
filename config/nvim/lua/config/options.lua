@@ -1,10 +1,14 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+
 local opt = vim.opt
 
 -- UI Config
 opt.number = true -- show line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.cursorline = true -- highlight the current line
-opt.wrap = true -- enable line wrapping
+opt.wrap = false -- enable line wrapping
 opt.scrolloff = 10 -- minimum number of screen lines to keep above and below the cursor
 opt.sidescrolloff = 8 -- minimum number of screen columns to keep to the left and right of the cursor
 
@@ -100,7 +104,7 @@ opt.maxmempattern = 20000
 -- Create Undo directory if it doesn't exist
 local undodir = vim.fn.expand("~/.vim/undodir")
 if vim.fn.isdirectory(undodir) == 0 then
-	vim.fn.mkdir(undodir, "p")
+  vim.fn.mkdir(undodir, "p")
 end
 
 vim.g.autoformat = true
@@ -127,17 +131,17 @@ opt.shortmess:append({ W = true, I = true, c = true, C = true })
 vim.g.markdown_reccomended_style = 0
 
 vim.filetype.add({
-	extension = {
-		env = "dotenv",
-	},
-	filename = {
-		[".env"] = "dotenv",
-		["env"] = "dotenv",
-	},
-	pattern = {
-		["[jt]sconfig.*.json"] = "jsonc",
-		["%.env%.[%w_.-]+"] = "dotenv",
-	},
+  extension = {
+    env = "dotenv",
+  },
+  filename = {
+    [".env"] = "dotenv",
+    ["env"] = "dotenv",
+  },
+  pattern = {
+    ["[jt]sconfig.*.json"] = "jsonc",
+    ["%.env%.[%w_.-]+"] = "dotenv",
+  },
 })
 
 opt.termguicolors = true -- enable true color support

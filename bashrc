@@ -14,8 +14,9 @@
 
 # Directory Aliases
 alias z='cd'
-alias ls='ls -l --color=auto'
-alias ll='ls -la --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias nv='nvim .'
 alias dotfiles='cd ~/dotfiles'
