@@ -1,4 +1,3 @@
-
 local opt = vim.opt
 
 -- UI Config
@@ -16,9 +15,9 @@ opt.ignorecase = true -- ignore case while searching
 opt.smartcase = true -- override ignorecase if search pattern contains uppercase letters
 
 -- HINT: use `:h <option>` to figure out the meaning if needed
-opt.clipboard = 'unnamedplus' -- use system clipboard
-opt.completeopt = {'menu', 'menuone', 'noselect'} -- configure completion options
-opt.mouse = 'a' -- enable mouse support
+opt.clipboard = "unnamedplus" -- use system clipboard
+opt.completeopt = { "menu", "menuone", "noselect" } -- configure completion options
+opt.mouse = "a" -- enable mouse support
 
 -- Indentation
 opt.tabstop = 2 -- number of spaces that a <Tab> in the file counts for
@@ -30,7 +29,7 @@ opt.autoindent = true -- enable automatic indentation
 
 -- Visual Settings
 opt.termguicolors = true -- enable true color support
-opt.signcolumn = 'yes' -- always show the sign column
+opt.signcolumn = "yes" -- always show the sign column
 opt.showmatch = true -- highlight matching brackets
 opt.matchtime = 2 -- time in tenths of a second to show matching brackets
 opt.cmdheight = 1 -- number of lines to use for the command line
@@ -38,24 +37,24 @@ opt.showmode = false -- do not show the mode (e.g., -- INSERT --) since it is sh
 opt.pumheight = 10 -- maximum number of items to show in the popup menu
 opt.pumblend = 10 -- transparency level for the popup menu
 opt.winblend = 0 -- transparency level for floating windows
-opt.completeopt = {'menu', 'menuone', 'noselect'} -- configure completion options
+opt.completeopt = { "menu", "menuone", "noselect" } -- configure completion options
 opt.conceallevel = 2 -- set conceal level to 0 to make text normally visible
 opt.confirm = true -- show a confirmation dialog when closing an unsaved buffer
-opt.concealcursor = '' -- do not conceal text even when the cursor is over it
+opt.concealcursor = "" -- do not conceal text even when the cursor is over it
 opt.synmaxcol = 300 -- maximum column for syntax highlighting
 opt.ruler = false -- do not show the cursor position in the status line
-opt.virtualedit = 'block' -- allow the cursor to move one character beyond the end of the line
+opt.virtualedit = "block" -- allow the cursor to move one character beyond the end of the line
 opt.winminwidth = 5 -- minimum width for a window
 
 -- File Handling
 opt.backup = false -- Don't create backup file
-opt.writebackup = flase -- dont create backup before writing
+opt.writebackup = false -- dont create backup before writing
 opt.swapfile = false -- disable swap file
 opt.undofile = true -- Persistent Undo
 opt.undolevels = 10000
 opt.undodir = vim.fn.expand("~/.vim/undodir") -- undo directory
 opt.updatetime = 300 -- Faster completion
-opt.timeoutlen = vim.g.vscode and 1000 or 300 
+opt.timeoutlen = vim.g.vscode and 1000 or 300
 opt.ttimeoutlen = 0 -- key code timeout
 opt.autoread = true -- auto reload files changed outside vim
 opt.autowrite = true -- autosave
@@ -101,7 +100,7 @@ opt.maxmempattern = 20000
 -- Create Undo directory if it doesn't exist
 local undodir = vim.fn.expand("~/.vim/undodir")
 if vim.fn.isdirectory(undodir) == 0 then
-  vim.fn.mkdir(undodir, "p")
+	vim.fn.mkdir(undodir, "p")
 end
 
 vim.g.autoformat = true
@@ -128,18 +127,17 @@ opt.shortmess:append({ W = true, I = true, c = true, C = true })
 vim.g.markdown_reccomended_style = 0
 
 vim.filetype.add({
-  extension = {
-    env = "dotenv"
-  },
-  filename = {
-    [".env"] = "dotenv",
-    ["env"] = "dotenv",
-  },
-  pattern = { 
-    ["[jt]sconfig.*.json"] = "jsonc",
-    ["%.env%.[%w_.-]+"] = "dotenv",
-  },
+	extension = {
+		env = "dotenv",
+	},
+	filename = {
+		[".env"] = "dotenv",
+		["env"] = "dotenv",
+	},
+	pattern = {
+		["[jt]sconfig.*.json"] = "jsonc",
+		["%.env%.[%w_.-]+"] = "dotenv",
+	},
 })
 
 opt.termguicolors = true -- enable true color support
-
