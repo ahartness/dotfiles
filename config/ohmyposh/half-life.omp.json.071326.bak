@@ -5,9 +5,21 @@
       "alignment": "left",
       "segments": [
         {
+          "foreground": "#7E46B6",
+          "style": "plain",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "in ",
+          "type": "text"
+        },
+        {
           "foreground": "#87FF00",
           "properties": {
-            "style": "short"
+            "style": "agnoster_short"
           },
           "style": "plain",
           "template": "{{ .Path }} ",

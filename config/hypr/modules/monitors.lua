@@ -1,1 +1,1 @@
-/home/hrtns/.config/hypr/monitors/dual.lua
+/home/hrtns/.config/hypr/monitors/thinkpad.lua

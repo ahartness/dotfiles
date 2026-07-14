@@ -1,3 +1,4 @@
 .DS_Store
 
-config/monitors.lua
+**/monitors.**
+config/hypr/modules/monitors.lua
