@@ -50,12 +50,14 @@ map("v", ">", ">gv")
 map("v", "p", '"_dP', opts)
 
 -- Auto-close pairs (simple, no plugin needed)
-map("i", "`", "``<left>")
-map("i", '"', '""<left>')
-map("i", "(", "()<left>")
-map("i", "[", "[]<left>")
-map("i", "{", "{}<left>")
-map("i", "<", "<><left>")
+-- Already have a plugin for this, but leaving these here
+-- in case I want to disable the plugin
+-- map("i", "`", "``<left>")
+-- map("i", '"', '""<left>')
+-- map("i", "(", "()<left>")
+-- map("i", "[", "[]<left>")
+-- map("i", "{", "{}<left>")
+-- map("i", "<", "<><left>")
 -- Note: single quotes comment out to avoid conflicts in some contexts
 -- map("i", "'", "''<left>")
 
