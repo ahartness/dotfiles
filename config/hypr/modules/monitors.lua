@@ -1,1 +1,0 @@
-/home/hrtns/.config/hypr/monitors/thinkpad.lua
