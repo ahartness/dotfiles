@@ -127,6 +127,13 @@ return {
         mode = { "n", "x" },
         desc = "Sidekick Select Prompt",
       },
+      -- CLI Specific Command
+      -- name = {copilot|claude|codex|opencode}
+      -- {
+      --   "<leader>ac",
+      --   function() require("sidekick.cli").toggle({ name = "claude", focus = true }) end,
+      --   desc = "Toggle Claude CLI",
+      -- }
     },
   },
 
