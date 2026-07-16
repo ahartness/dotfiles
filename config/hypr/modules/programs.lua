@@ -3,8 +3,10 @@
 ---------------------
 
 return {
-	--terminal = "ghostty",
 	terminal = "kitty",
-	fileManager = "dolphin",
+	fileManager = "nautilus",
 	browser = "firefox",
+	-- Old options:
+	-- terminal = "ghostty",
+	-- fileManager = "dolphin",
 }
