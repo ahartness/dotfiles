@@ -6,8 +6,8 @@
       "segments": [
         {
           "foreground": "#87FF00",
-          "properties": {
-            "style": "short"
+          "options": {
+            "style": "folder"
           },
           "style": "plain",
           "template": "{{ .Path }} ",
@@ -15,7 +15,7 @@
         },
         {
           "foreground": "#5FD7FF",
-          "properties": {
+          "options": {
             "branch_ahead_icon": "",
             "branch_behind_icon": "",
             "branch_gone_icon": "",
@@ -43,5 +43,5 @@
       "type": "prompt"
     }
   ],
-  "version": 3
+  "version": 4
 }
