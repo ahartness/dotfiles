@@ -29,6 +29,16 @@ return {
           -- stylua: ignore
           keys = {
             {
+              "<leader>tc",
+              function()
+                local enabled = vim.lsp.inline_completion.is_enabled()
+                vim.lsp.inline_completion.enable(not enabled)
+                vim.notify("Copilot suggestions " .. ((not enabled) and "enabled" or "disabled"))
+              end,
+              desc = "Toggle Copilot Suggestions",
+              mode = "n",
+            },
+            {
               "<A-]>",
               function() vim.lsp.inline_completion.select({ count = 1 }) end,
               desc = "Next Copilot Suggestion",
