@@ -1,6 +1,6 @@
 -- Ultra Wide Only Monitor Setup
 hl.monitor({
-	output = "DP-3",
+	output = "DP-1",
 	disabled = true,
 })
 hl.monitor({

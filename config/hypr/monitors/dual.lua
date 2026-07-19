@@ -1,6 +1,6 @@
 -- Dual Monitor Setup
 hl.monitor({
-	output = "DP-3",
+	output = "DP-1",
 	mode = "2560x1440@120",
 	position = "0x0",
 	scale = "1",
@@ -14,11 +14,11 @@ hl.monitor({
 
 -- Bind workspaces to monitors
 
--- Workspace 1-6 on DP-3,
+-- Workspace 1-6 on DP-1,
 for i = 1, 6 do
 	hl.workspace_rule({
 		workspace = tostring(i),
-		monitor = "DP-3",
+		monitor = "DP-1",
 		persistent = true,
 	})
 end
