@@ -13,7 +13,7 @@ hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc cal
 
 -- Program Launching
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(programs.terminal))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
+hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(programs.notes))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(programs.mail))
