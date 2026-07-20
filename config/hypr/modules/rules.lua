@@ -18,6 +18,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "quick-access-stay-focused",
+	match = { title = "^(Quick Access)$" },
+	stay_focused = true,
+})
+
+hl.window_rule({
 	name = "fix-xwayland-drags",
 	match = {
 		class = "^$",
