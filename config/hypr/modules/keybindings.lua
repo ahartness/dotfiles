@@ -13,12 +13,12 @@ hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc cal
 
 -- Program Launching
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(programs.terminal))
-hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(programs.browser))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(programs.notes))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(programs.mail))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(programs.passwords .. " --quick-access"))
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(programs.passwords .. " --toggle"))
+hl.bind(mainMod .. " + BACKSLASH", hl.dsp.exec_cmd(programs.passwords .. " --quick-access"))
+hl.bind(mainMod .. " + SHIFT + BACKSLASH", hl.dsp.exec_cmd(programs.passwords .. " --toggle"))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 
