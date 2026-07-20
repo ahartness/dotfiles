@@ -7,6 +7,8 @@ return {
 	fileManager = "nautilus",
 	browser = "firefox",
 	notes = "obsidian",
+	mail = "proton-mail",
+	passwords = "1password",
 	-- Old options:
 	-- terminal = "ghostty",
 	-- fileManager = "dolphin",
