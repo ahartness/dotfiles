@@ -37,7 +37,7 @@ end, { description = "Toggle active window to maximized (scrolling)" })
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Don't use this, I have the noctalia-shell sessionMenu that handles this better
--- hl.bind(mainMod .. " + M", hl.dsp.exit())
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit())
 
 -- Window Management
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
