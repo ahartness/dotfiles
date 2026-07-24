@@ -24,9 +24,9 @@ opt.completeopt = { "menu", "menuone", "noselect" } -- configure completion opti
 opt.mouse = "a" -- enable mouse support
 
 -- Indentation
-opt.tabstop = 2 -- number of spaces that a <Tab> in the file counts for
-opt.softtabstop = 2 -- number of spaces that a <Tab> counts for while editing
-opt.shiftwidth = 2 -- number of spaces to use for each step of (auto)indent
+opt.tabstop = 4 -- number of spaces that a <Tab> in the file counts for
+opt.softtabstop = 4 -- number of spaces that a <Tab> counts for while editing
+opt.shiftwidth = 4 -- number of spaces to use for each step of (auto)indent
 opt.expandtab = true -- convert tabs to spaces
 opt.smartindent = true -- enable smart indentation
 opt.autoindent = true -- enable automatic indentation
