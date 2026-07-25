@@ -1,19 +1,19 @@
+---@diagnostic disable: undefined-global
 -- Dual Monitor Setup
 hl.monitor({
 	output = "DP-1",
-	mode = "2560x1440@120",
+	mode = "2560x1440@180.00",
 	position = "0x0",
 	scale = "1",
 })
 hl.monitor({
 	output = "DP-2",
-	mode = "3440x1400@100",
+	mode = "3440x1400@144.00",
 	position = "0x-1440", -- Why does this not work?
 	scale = "1",
 })
 
 -- Bind workspaces to monitors
-
 -- Workspace 1-6 on DP-1,
 for i = 1, 6 do
 	hl.workspace_rule({

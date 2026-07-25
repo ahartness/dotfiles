@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Dual Monitor Setup
 hl.monitor({
 	output = "DP-1",
