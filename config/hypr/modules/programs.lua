@@ -1,6 +1,11 @@
+---@diagnostic disable: undefined-global
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
+
+hl.env("TERMINAL", "kitty")
+hl.env("FILE_MANAGER", "nautilus")
+hl.env("BROWSER", "firefox")
 
 return {
 	terminal = "kitty",
