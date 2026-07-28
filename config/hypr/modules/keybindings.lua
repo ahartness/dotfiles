@@ -49,11 +49,21 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 
+-- Window Swapping
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.swap({ direction = "left" }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.swap({ direction = "right" }))
+
 for i = 1, 10 do
 	local key = i % 10
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
+
+-- Window Resizing
+hl.bind(mainMod .. " + equal", hl.dsp.layout("colresize +0.1"), { repeating = true })
+hl.bind(mainMod .. " + minus", hl.dsp.layout("colresize -0.1"), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + equal", hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + minus", hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
