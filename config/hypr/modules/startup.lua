@@ -1,9 +1,10 @@
+---@diagnostic disable: undefined-global
 -------------------
 ---- AUTOSTART ----
 -------------------
 
 hl.on("hyprland.start", function()
-	-- hl.exec_cmd("awww-daemon")
-	-- hl.exec_cmd("ghostty")
-	hl.exec_cmd("qs -c noctalia-shell")
+	-- Autostart applications
 end)
+
+hl.exec_cmd("qs --no-duplicate -c noctalia-shell")
