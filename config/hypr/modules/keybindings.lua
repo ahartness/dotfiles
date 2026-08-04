@@ -24,6 +24,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 
 -- Removing Pseduo Bind, I never use this
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + P", hl.dsp.window.float({ action = "toggle" }))
 
 -- Simple maximize bind (known bug where this does not work on scrolling layout)
 -- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 'maximized', state = "toggle" }))
