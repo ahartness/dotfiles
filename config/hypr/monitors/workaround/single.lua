@@ -5,16 +5,13 @@
 -- disables it after this valid configuration has been atomically installed.
 
 hl.monitor({
-    output = "DP-1",
-    mode = "2560x1440@120.00",
-    position = "0x0",
-    scale = "1",
+	output = "DP-1",
+	mode = "2560x1440@120.00",
+	position = "0x0",
+	scale = "1",
 })
 
-for i = 1, 10 do
-    hl.workspace_rule({
-        workspace = tostring(i),
-        monitor = "DP-1",
-        persistent = true,
-    })
-end
+hl.monitor({
+	output = "DP-2",
+	disabled = true,
+})
