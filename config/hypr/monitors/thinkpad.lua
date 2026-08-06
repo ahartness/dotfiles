@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Thinkpad t14 Gen 3 setup
 hl.monitor({
 	output = "eDP-1",

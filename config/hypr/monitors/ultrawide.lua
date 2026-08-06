@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Ultra Wide Only Monitor Setup
 hl.monitor({
 	output = "DP-1",
