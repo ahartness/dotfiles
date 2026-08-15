@@ -1,0 +1,9 @@
+1password
+1password-cli
+mongodb-compass-bin
+nordvpn-bin
+nordvpn-gui
+oh-my-posh
+oversteer
+uhk-agent-appimage
+unityhub
