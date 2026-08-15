@@ -14,7 +14,8 @@ hl.window_rule({
 	name = "floating-localsend",
 	match = { class = "localsend" },
 	float = true,
-	size = { 800, 600 },
+	center = true,
+	size = { 1000, 800 },
 })
 
 hl.window_rule({
@@ -48,4 +49,15 @@ hl.layer_rule({
 	match = {
 		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd)$",
 	},
+})
+
+hl.window_rule({
+	name = "qbittorrent secondary float",
+	match = {
+		class = "org.qbittorrent.qBittorrent",
+		title = "negative:.*qBittorrent.*",
+	},
+	float = true,
+	center = true,
+	size = { 1000, 800 },
 })
