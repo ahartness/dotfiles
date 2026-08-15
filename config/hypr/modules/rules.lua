@@ -55,9 +55,12 @@ hl.window_rule({
 	name = "qbittorrent secondary float",
 	match = {
 		class = "org.qbittorrent.qBittorrent",
-		title = "negative:.*qBittorrent.*",
+		title = "negative:^(.*qBittorrent.*|Remove torrent\\(s\\))$",
 	},
 	float = true,
 	center = true,
 	size = { 1000, 800 },
 })
+
+-- Relative sizing example (60% of monitor width, 70% of monitor height):
+-- size = { "monitor_w * 0.6", "monitor_h * 0.7" }
