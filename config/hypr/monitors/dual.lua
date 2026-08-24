@@ -6,10 +6,16 @@ hl.monitor({
 	position = "0x0",
 	scale = "1",
 })
+-- hl.monitor({
+-- 	output = "DP-2",
+-- 	mode = "3440x1400@144.00",
+-- 	position = "0x-1440", -- Why does this not work?
+-- 	scale = "1",
+-- })
 hl.monitor({
 	output = "DP-2",
-	mode = "3440x1400@144.00",
-	position = "0x-1440", -- Why does this not work?
+	mode = "3440x1440@100.00",
+	position = "-3440x0",
 	scale = "1",
 })
 
