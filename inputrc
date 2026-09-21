@@ -10,7 +10,7 @@ set completion-map-case on
 set show-all-if-ambiguous on
 
 # Show matched without requiring a second tab press
-set show-all-if-unmodified on
+# set show-all-if-unmodified on
 
 # Add colors to completion results
 set colored-stats on

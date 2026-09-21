@@ -37,6 +37,22 @@ hl.window_rule({
 	no_focus = true,
 })
 
+-- Hyprland has no minimize state, so keep Steam's blank helper window on an
+-- inactive special workspace instead.
+hl.window_rule({
+	name = "hide-blank-steam-helper",
+	match = {
+		class = "^steam_app_default$",
+		title = "^$",
+		xwayland = true,
+		float = true,
+		fullscreen = false,
+		pin = false,
+	},
+	workspace = "special:steam-hidden silent",
+	no_initial_focus = true,
+})
+
 hl.window_rule({
 	name = "move-hyprland-run",
 	match = { class = "hyprland-run" },
