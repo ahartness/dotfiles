@@ -5,11 +5,17 @@
 
 local programs = require("modules.programs")
 local mainMod = "SUPER"
+local ipc = "noctalia msg "
 
 -- Launcher Commands
 -- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
+--
+-- Legacy commands for the old noctalia-shell, I have since moved to a new IPC system in v5
+-- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
+-- hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
+
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 
 -- Program Launching
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(programs.terminal))

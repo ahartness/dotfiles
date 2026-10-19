@@ -5,7 +5,9 @@
 
 hl.on("hyprland.start", function()
 	-- Autostart applications
-	hl.exec_cmd("qs -c noctalia-shell")
+	-- hl.exec_cmd("qs -c noctalia-shell")
+	hl.exec_cmd("noctalia")
 end)
 
-hl.exec_cmd("qs --no-duplicate -c noctalia-shell")
+-- legacy v4 noctalia
+-- hl.exec_cmd("qs --no-duplicate -c noctalia-shell")

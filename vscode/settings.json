@@ -18,7 +18,7 @@
   "editor.smoothScrolling": true,
   "editor.bracketPairColorization.enabled": true,
   // Workbench Settings
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "diffEditor.renderSideBySide": false,
   "breadcrumbs.enabled": false,
