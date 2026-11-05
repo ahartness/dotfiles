@@ -10,4 +10,12 @@ Periscope
 Prettier
 Tailwind CSS Intellisense
 VIM
-Todo Tree
+TODO Highlight
+C++ Tools Pack
+CMake Tools
+Codex
+Dev Containers
+Python Pack
+rust-analyzer
+QML
+Vague Theme

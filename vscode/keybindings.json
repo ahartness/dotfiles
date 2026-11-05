@@ -50,19 +50,19 @@
     "command": "workbench.action.output.toggleOutput",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
-  {
-    "key": "space g g", // [G] [G]it
-    "command": "lazygit.openLazygit",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
   // {
   //   "key": "space g g", // [G] [G]it
-  //   "command": "runCommands",
-  //   "args": {
-  //     "commands": ["workbench.view.scm", "workbench.scm.focus"],
-  //   },
-  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
+  //   "command": "lazygit.openLazygit",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   // },
+  {
+    "key": "space g g", // [G] [G]it
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.view.scm", "workbench.scm.focus"],
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
+  },
   {
     "key": "space q", // [Q]uit
     "command": "workbench.action.closeActiveEditor",
@@ -323,6 +323,21 @@
   // =======================
   // ======= EDITOR ========
   // =======================
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'Insert') && editorTextFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'Insert') && editorTextFocus"
+  },
+  {
+    "key": "alt+a",
+    "command": "editor.action.selectAll",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
   {
     "key": "tab",
     "command": "selectNextSuggestion",
