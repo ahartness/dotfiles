@@ -33,14 +33,14 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + P", hl.dsp.window.float({ action = "toggle" }))
 
 -- Simple maximize bind (known bug where this does not work on scrolling layout)
--- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 'maximized', state = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", state = "toggle" }))
 
 -- Workaround function for scrolling layout, revert to above is using dwindle
-hl.bind(mainMod .. " + F", function()
-	hl.dispatch(hl.dsp.layout("colresize +conf"))
-	hl.dispatch(hl.dsp.layout("focus r"))
-	hl.dispatch(hl.dsp.layout("focus l"))
-end, { description = "Toggle active window to maximized (scrolling)" })
+-- hl.bind(mainMod .. " + F", function()
+-- 	hl.dispatch(hl.dsp.layout("colresize +conf"))
+-- 	hl.dispatch(hl.dsp.layout("focus r"))
+-- 	hl.dispatch(hl.dsp.layout("focus l"))
+-- end, { description = "Toggle active window to maximized (scrolling)" })
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Don't use this, I have the noctalia-shell sessionMenu that handles this better

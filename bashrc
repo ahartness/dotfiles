@@ -56,3 +56,9 @@ eval "$(fzf --bash)"
 
 # opencode
 export PATH=/home/hrtns/.opencode/bin:$PATH
+
+. "$HOME/.local/share/../bin/env"
+
+# >>> Codex installer >>>
+export PATH="/home/hrtns/.local/bin:$PATH"
+# <<< Codex installer <<<

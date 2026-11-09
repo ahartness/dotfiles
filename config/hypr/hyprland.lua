@@ -5,3 +5,6 @@ require("modules.keybindings")
 require("modules.monitors")
 require("modules.startup")
 require("modules.rules")
+
+-- HyprMod managed settings
+require("hyprland-gui")
