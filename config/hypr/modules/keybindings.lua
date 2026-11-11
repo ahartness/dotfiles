@@ -46,6 +46,9 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen
 -- Don't use this, I have the noctalia-shell sessionMenu that handles this better
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit())
 
+-- Screen shot using grim and slurp, then pipe to swappy for editing
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+
 -- Window Management
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))

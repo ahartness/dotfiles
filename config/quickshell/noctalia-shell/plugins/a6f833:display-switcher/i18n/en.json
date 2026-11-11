@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "scriptPath": {
+      "label": "Display layout script",
+      "description": "Absolute path to the display script that receives the selected layout as its first argument"
+    }
+  },
+  "bar": {
+    "tooltip": "Script Utilities"
+  },
+  "panel": {
+    "title": "Script Utilities",
+    "close": "Close",
+    "display-switcher": {
+      "title": "Display Switcher",
+      "description": "Choose a monitor layout",
+      "single": "Single 16:9 Monitor",
+      "dual": "Dual Monitor Setup",
+      "ultrawide": "Ultrawide Monitor",
+      "steamdeck": "Steam Deck"
+    },
+    "scripts": {
+      "title": "Scripts",
+      "description": "Run system utility scripts",
+      "pipewire-fix-steam": "Pipewire Fix (Steam)",
+      "noctalia-reload": "Restart Noctalia"
+    },
+    "status": {
+      "running": "Running utility...",
+      "layout-success": "Layout switched: {mode}",
+      "pipewire-success": "Pipewire services restarted",
+      "noctalia-success": "Noctalia restarted",
+      "error-detail": "Failed: {error}",
+      "error-code": "Command failed with exit code {code}"
+    }
+  }
+}
