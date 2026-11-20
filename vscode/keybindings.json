@@ -46,7 +46,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space g w", 
+    "key": "space g w",
     "command": "workbench.action.output.toggleOutput",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
@@ -59,9 +59,12 @@
     "key": "space g g", // [G] [G]it
     "command": "runCommands",
     "args": {
-      "commands": ["workbench.view.scm", "workbench.scm.focus"],
+      "commands": [
+        "workbench.view.scm",
+        "workbench.scm.focus"
+      ]
     },
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "key": "space q", // [Q]uit

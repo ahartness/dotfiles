@@ -1,6 +1,0 @@
-app.bluebubbles.BlueBubbles
-com.adamcake.Bolt
-com.discordapp.Discord
-com.jagex.Launcher
-com.nvidia.geforcenow
-net.davidotek.pupgui2
