@@ -2,3 +2,4 @@
 
 **/monitors.**
 config/hypr/modules/monitors.lua
+/config/ghostty/local.ghostty

@@ -1,6 +1,9 @@
 font-family = "JetBrainsMono Nerd Font"
-font-size = 12
+font-size = 16
 confirm-close-surface = false
 app-notifications=no-clipboard-copy
 window-padding-x = 10
 window-padding-y = 5 
+
+# Optional settings specific to this computer.
+config-file = ?local.ghostty

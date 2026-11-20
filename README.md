@@ -63,6 +63,21 @@ It can link specific items, or everything at once.
 - `--all` includes root file candidates: `bashrc`, `zshrc`, `profile`, `gitconfig`, and `tmux.conf` (if present in the repo root).
 - The target config directory defaults to `~/.config` unless `XDG_CONFIG_HOME` is set.
 
+### Ghostty font size per computer
+
+The shared `config/ghostty/config.ghostty` defaults to font size 16 and loads an
+optional `local.ghostty` file from the same directory. This local file is ignored
+by Git, so each computer can keep its own settings.
+
+On the laptop, create `config/ghostty/local.ghostty` with:
+
+```ini
+font-size = 14
+```
+
+The desktop uses 16 without a local override. Reload Ghostty's configuration with
+`Ctrl+Shift+,` on Linux or `Cmd+Shift+,` on macOS after changing these files.
+
 ## Notes
 
 These configs are tuned for my workflow and machine, so they may assume tools, paths, or conventions that are specific to my setup.
