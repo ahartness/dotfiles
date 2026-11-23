@@ -2,6 +2,28 @@ return {
   {
     "snacks.nvim",
     opts = {
+      picker = {
+        sources = {
+          explorer = {
+            actions = {
+              toggle_hidden_ignored = function(picker)
+                local show = not (picker.opts.hidden and picker.opts.ignored)
+                picker.opts.hidden = show
+                picker.opts.ignored = show
+                picker.list:set_target()
+                picker:find()
+              end,
+            },
+            win = {
+              list = {
+                keys = {
+                  ["h"] = { "toggle_hidden_ignored", desc = "Toggle Hidden and Ignored Files" },
+                },
+              },
+            },
+          },
+        },
+      },
       dashboard = {
         preset = {
           pick = function(cmd, opts)
