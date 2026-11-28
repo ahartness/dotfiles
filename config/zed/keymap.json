@@ -121,6 +121,7 @@
       "alt-shift-e": "project_panel::Toggle",
       "alt-shift-k": "agent::Toggle",
       "alt-shift-g": "git_panel::Toggle",
+      "alt-shift-p": "git_panel::Toggle",
       "alt-shift-j": "workspace::ToggleBottomDock",
     },
   },
