@@ -9,6 +9,10 @@
 {
   "agent_servers": {
     "codex-acp": {
+      "default_config_options": {
+        "reasoning_effort": "medium",
+        "model": "gpt-6.2-sol"
+      },
       "type": "registry"
     }
   },
@@ -102,7 +106,9 @@
       "status_bar.background": "#202028",
       "elevated_surface.background": "#252530",
       "ghost_element.background": "#00000000",
-      "ghost_element.hover": "#30303c",
+      "ghost_element.hover": "#4b4b61",
+      "ghost_element.active": "#55556f",
+      "ghost_element.selected": "#55556f",
       "element.hover": "#30303c",
       "border": "#34343f",
       "border.variant": "#2c2c36"
