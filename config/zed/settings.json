@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
   "icon_theme": "Zed (Default)",
   "telemetry": {
     "diagnostics": false,
@@ -82,6 +87,27 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Ayu Dark",
+    "dark": "Vague",
+  },
+  "theme_overrides": {
+    "Vague": {
+      // Lighter UI surfaces distinguish panels and bars from the editor.
+      "background": "#202028",
+      "surface.background": "#202028",
+      "panel.background": "#202028",
+      "toolbar.background": "#202028",
+      "tab_bar.background": "#202028",
+      "tab.inactive_background": "#202028",
+      "title_bar.background": "#202028",
+      "title_bar.inactive_background": "#1c1c24",
+      "status_bar.background": "#202028",
+      "terminal.background": "#202028",
+      "elevated_surface.background": "#252530",
+      "ghost_element.background": "#00000000",
+      "ghost_element.hover": "#30303c",
+      "element.hover": "#30303c",
+      "border": "#34343f",
+      "border.variant": "#2c2c36"
+    }
   },
 }
