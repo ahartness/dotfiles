@@ -1,4 +1,4 @@
----@diagnostic disable: duplicate-set-field
+---@diagnostic disable: duplicate-set-field, undefined-global
 return {
   desc = "Next edit suggestions with the Copilot LSP server",
 
@@ -6,6 +6,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
+---@diagnostic disable-next-line: undefined-doc-name
       local sk = LazyVim.opts("sidekick.nvim") ---@type sidekick.Config|{}
       if vim.tbl_get(sk, "nes", "enabled") ~= false then
         opts.servers = opts.servers or {}

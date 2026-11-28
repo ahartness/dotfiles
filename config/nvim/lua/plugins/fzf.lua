@@ -1,4 +1,4 @@
----@diagnostic disable: duplicate-doc-field, unused-local
+---@diagnostic disable: duplicate-doc-field, unused-local, undefined-doc-class
 ---@class FzfLuaOpts: lazyvim.util.pick.Opts
 ---@field cmd string?
 

@@ -166,6 +166,30 @@
     "key": "ctrl-j",
     "command": "workbench.action.navigateDown"
   },
+  {
+    "key": "alt+shift+e",
+    "command": "workbench.view.explorer",
+    "when": "!sideBarVisible || activeViewlet != 'workbench.view.explorer'"
+  },
+  {
+    "key": "alt+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
+  },
+  {
+    "key": "alt+shift+k",
+    "command": "workbench.action.chat.toggle"
+  },
+  {
+    "key": "alt+shift+g",
+    "command": "workbench.view.scm",
+    "when": "!sideBarVisible || activeViewlet != 'workbench.view.scm'"
+  },
+  {
+    "key": "alt+shift+g",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.scm'"
+  },
   // ========================
   // ======= BUFFERS ========
   // ========================

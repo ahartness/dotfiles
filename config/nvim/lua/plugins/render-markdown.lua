@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-doc-name
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",

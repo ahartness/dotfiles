@@ -1,4 +1,4 @@
----@diagnostic disable: missing-fields, duplicate-set-field
+---@diagnostic disable: missing-fields, duplicate-set-field, undefined-global
 if lazyvim_docs then
   -- Native inline completions don't support being shown as regular completions
   vim.g.ai_cmp = false
